@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300&family=Salsa&display=swap');
+
+/* page 1 */
+
+*{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+nav strong {
+    color: white;
+}
+
+.cb{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+nav{
+     background-color: #0D1B1E;
+     display: flex;
+     justify-content: space-around;
+     padding-top: 1vw;
+     padding-bottom: 1vw;
+}
+
+.links a{
+    font-family: Fira Sans Extra Condensed;
+    margin-left: 1vw;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-items: space-between;
+}
+
+#vidbg{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.banner{
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 10vw;
+    padding: 5vw;
+    background-color: rgba(0, 0, 0, 0.80);    
+}
+
+.pagetitle{
+    font-family: Salsa;
+    color: #1B998B;
+}
+
+.bannertxt{
+    font-family: Salsa;
+    font-size: 40pt;
+    font-weight: 750;
+    color:#1B998B;
+}
+
+h2{   
+    font-family: Salsa;
+    color: #E8F0FF;
+}
+
+#bg{
+    font-family: Fira Sans Extra Condensed;
+    margin: 8vw;
+    padding: 5vw;
+    background-color: rgba(0, 0, 0, 0.80);    
+    color: #E8F0FF;    
+}
+
+#progress{
+    font-family: Fira Sans Extra Condensed;
+    margin: 8vw;
+    padding: 5vw;
+    background-color: rgba(0, 0, 0, 0.80);    
+    color: #E8F0FF;    
+}
+
+/* page 2 */
+
+.image{
+    width: 50%;
+    border-radius: 25px;
+}
+
+h1{
+    font-size: 5vw;
+    padding: 7vw;
+    font-family: Salsa;
+    color: #191716;
+}
+
+#abt_us{
+    background-color: #F1FFE7;
+}
+
+.text{
+    font-size: 1vw;
+    position: relative;
+}
+
+#pics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    margin: 10px;
+    width: 31vw;
+}
+
+.image{ 
+    opacity: 1;
+    transform: translate(60%);
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -40%);
+    text-align: center;
+}
+
+.container:hover .image{
+    opacity: 0.3;
+}
+
+.container:hover .middle{
+    opacity: 1;
+}
+
+
+
+.box{
+    margin: 5vw;
+    font-family: Fira Sans Extra Condensed;
+    background-image: linear-gradient(to right, #1C5D99, #1B998B);
+    color: #E8F0FF;      
+}
+
+
+.side{
+    padding: 3vw;
+}
+
+/* page 3 */
+
+
+
+.box2{
+    background-color: #1C5D99;
+    width: 40vw;
+    border-radius: 2vw;
+    margin: 7vw;    
+    padding: 2vw;
+    font-family: Fira Sans Extra Condensed;
+    color: #E8F0FF;
+}
+
+#linkz{
+    align-self: center;
+}
+
+.links_2{
+    margin: 2vw;
+}
+
+.upper{
+    background-color: #1C5D99;
+    color: #E8F0FF;
+    font-family: Fira Sans Extra Condensed;
+    width: 17vw;
+    height: 60vh;
+    margin-bottom: 2vw;
+    border-radius: 25px;
+}
+
+.uppertxt{
+    padding: 1vw;
+}
+
+.lowertxt{
+    background-color: #1C5D99;
+    color: #E8F0FF;
+    font-family: Fira Sans Extra Condensed;
+    text-align: center;
+    animation: click 0.5s infinite ;
+}
+
+.icon{
+    background: url(images/sprite.png) no-repeat;
+    display: inline-block;
+    align-items: center;
+    margin: 1vw;
+}
+
+#facebook{
+    background-position: 0 -2px;
+    width: 198px;
+	height: 200px;
+}
+#insta{
+    background-position: -199px 0;
+    width: 205px;
+	height: 202px;
+}
+#maps{
+    background-position: -405px 0;
+	width: 203px;
+	height: 202px;
+}
+#call{
+    background-position: -610px -3px;    
+	width: 208px;
+	height: 208px;
+}
+
+@keyframes click{
+    50%{transform: scale(1.2)}
+}
+
+/* media */
+
+@media screen and (max-width: 856px){
+    .container {
+        width: 100%;
+    }
+
+    #pics {
+        justify-content: flex-start;
+    }
+
+    .text{
+        font-size: 3vw;
+    }
+
+    .full_img{
+        width: 100%;
+    }
+
+    h1{
+        font-size: 8vw;
+    }
+
+    .side{
+        padding: 6vw;
+    }
+}
+
+@media screen and (min-width: 857px){
+    
+    .box{
+        display: flex;
+        align-items: center;
+    }
+
+    .full_img{
+        width: 30%;
+    }
+
+    .side{
+        font-size: 0.95vw;
+    }
+
+    #vision_n_mission{
+        display: flex;
+    }
+
+    #linkz{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 600px){
+    nav{
+        position: relative;
+    }
+    .pagetitle{
+        padding: 1vw;
+        color: white;
+    }
+    .links{
+        display: none;
+        z-index: 1;
+        position: absolute;
+        background-color: #0D1B1E;
+        min-width: 75vw;
+        box-shadow: 0px 8px 16px 0px rgb(0, 0, 0.2);        
+    }
+    .links a{
+        color: white;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        display: block;
+    }
+    .links a:hover{background-color: #0D1B1E; transition: 0.5s;}
+    nav:hover .links{display: block; transition: 0.5s;}
+    nav:hover .pagetitle{background-color: #0D1B1E; transition: 0.5s;} 
+}
